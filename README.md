@@ -1,4 +1,4 @@
-[!](https://david-dm.org/MySolace/CrisisTrends.svg)
+[[!](https://david-dm.org/MySolace/CrisisTrends.svg)]
 
 # CrisisTrends
 
