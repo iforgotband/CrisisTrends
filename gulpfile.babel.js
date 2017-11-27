@@ -25,7 +25,6 @@
 // https://babeljs.io/docs/learn-es2015/
 
 import path from 'path';
-import gulp from 'gulp';
 import del from 'del';
 import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
@@ -37,6 +36,11 @@ import merge from 'merge-stream';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+// Added for gulp-uglify changes
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 // Lint JavaScript
 gulp.task('lint', () =>
@@ -129,7 +133,6 @@ gulp.task('scripts', () =>
       .pipe($.sourcemaps.write())
       .pipe(gulp.dest('.tmp/scripts'))
       .pipe($.concat('main.min.js'))
-      .pipe($.uglify({preserveComments: 'some'}))
       // Output files
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
