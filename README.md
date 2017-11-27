@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/MySolace/CrisisTrends.svg?branch=v2)](https://travis-ci.org/MySolace/CrisisTrends)
+[![Build Status](https://travis-ci.org/MySolace/CrisisTrends.svg?branch=MySolace)](https://travis-ci.org/MySolace/CrisisTrends)
 [![Dependency Status](https://david-dm.org/MySolace/CrisisTrends/dev-status.svg)](https://david-dm.org/MySolace/CrisisTrends)
 [![Coverage Status](https://coveralls.io/repos/MySolace/CrisisTrends/badge.svg?branch=MySolace&service=github)](https://coveralls.io/github/MySolace/CrisisTrends?branch=MySolace)
 
