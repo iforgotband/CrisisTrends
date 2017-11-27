@@ -14,13 +14,12 @@ before_script:
   - export PATH="$HOME/.yarn/bin:$PATH"
   - npm install gulp --save-dev
 script:
-  - npm install
   - yarn
   - gulp
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: "./app"
+  local_dir: "dist"
   name: Deploy
   email: casey@mysolace.life
   project_name: Crisis Trends
