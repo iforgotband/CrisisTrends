@@ -19,6 +19,7 @@ before_script:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
   - export PATH="$HOME/.yarn/bin:$PATH"
 script:
+  - nyc npm test && nyc report --reporter=text-lcov | coveralls
   - gulp 
 deploy:
   provider: pages
