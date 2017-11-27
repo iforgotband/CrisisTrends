@@ -14,6 +14,9 @@ before_script:
   - export PATH="$HOME/.yarn/bin:$PATH"
   - npm install babel-preset-env gulp grunt-coveralls --save-dev
 script:
+  - npm install
+  - yarn
+  - grunt coveralls
   - gulp
 deploy:
   provider: pages
