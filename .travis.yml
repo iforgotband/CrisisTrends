@@ -11,13 +11,12 @@ branches:
   only:
   - MySolace
 cache:
-  yarn: true
   directories:
   - node_modules
 before_script:
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH="$HOME/.yarn/bin:$PATH"
-- npm install gulp
+- npm install gulp nyc
 script:
 - nyc npm test && nyc report --reporter=text-lcov | coveralls
 - gulp
