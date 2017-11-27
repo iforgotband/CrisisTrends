@@ -3,7 +3,7 @@
     "ajv": "^5.5.0",
     "apache-server-configs": "^2.15.0",
     "babel-core": "^6.14.0",
-    "babel-preset-env": "^6.0.15",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
     "carousel-js": "^3.1.1",
     "coveralls": "^3.0.0",
