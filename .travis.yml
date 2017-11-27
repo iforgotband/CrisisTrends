@@ -16,7 +16,7 @@ cache:
 before_script:
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH="$HOME/.yarn/bin:$PATH"
-- npm install babel-cli gulp nyc
+- npm install babel-preset-env gulp nyc --save-dev
 script:
 - nyc npm test && nyc report --reporter=text-lcov | coveralls
 - gulp
