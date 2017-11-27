@@ -1,16 +1,19 @@
 sudo: false
 language: node_js
 node_js:
-  - '6'
-  - '5'
+- '6'
+- '5'
 cache:
   directories:
-    - node_modules
+  - node_modules
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  github_token: "$GITHUB_TOKEN"
   on:
     branch: gh-pages
 notifications:
   email: false
+env:
+  matrix:
+    secure: X4zgmS0Scr1mExfHoXb3echeHDhTN3HVG4V/MMPibvgi/If217bJSz8tBhfBia3rBCmlWMIhCqB68yvkHvfcgXrhwKMStW+B+a5wWr468+0hTl3PSuMj8sgJSgcMIqAEfkmDJ9pth5e5QzTuGiMcOzRlvkLrZeiYfVcft0/ppyMZOrQ4R6nuUkP9ozFOg3g5hre/rE+PacOGyOjaAzOPiCENLeMFoRHnaKeomE8RN1XApKahHwJb5ePKdLvmq9dreDqYLiSNWzjnsKzWyZ9VnqntPCSvSBx0aY2iJ3/smZemIxCE/yZPEEhB2yY59JR+52pSO0T11lePtvXkq5ox4A1ZzJ3Cy8mzMwU7LBTZaHUVC+uavPf4FJK8rDb5RTC/lJo81ldYN3VtmTXOwcNSo6o3o69Tryi0PXRRD6P99r5qakSpX18mtALn7xSOABDCt+kg4PiquRuCmGaRJKWL9MlanMACRiwB50U4G4mrsno43lHvSwaQ4gZj+iJLYPbim9GmHtrqhUdoAql+F1befAiLuXv9e3j3KiFkUOZpsvOVIuzELAz9a8qsgM/7Zv6b6oJLisyMPhgyr8ZtIOwSLA+o0kKPK2odg56c9IM3zTHwhhcqZFayxXt51Vrc5G8d+SRPOeMDkzZOCC8dSVmc1euASRSrWf7YF2mGxFXESIY=
