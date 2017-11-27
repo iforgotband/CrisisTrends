@@ -15,7 +15,7 @@ cache:
   directories:
   - node_modules
 before_script:
-- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.3.2
+- curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH="$HOME/.yarn/bin:$PATH"
 script:
 - nyc npm test && nyc report --reporter=text-lcov | coveralls
