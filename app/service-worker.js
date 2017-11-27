@@ -1,3 +1,4 @@
+/* eslint-disable */
 // This file is intentionally without code.
 // It's present so that service worker registration will work when serving from the 'app' directory.
 // The version of service-worker.js that's present in the 'dist' directory is automatically
