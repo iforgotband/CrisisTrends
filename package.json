@@ -65,5 +65,8 @@
         "warn"
       ]
     }
+  },
+  "dependencies": {
+    "gulp-cli": "^1.4.0"
   }
 }
