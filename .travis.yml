@@ -2,12 +2,10 @@ sudo: false
 language: node_js
 node_js:
   - node
-  - lts/*
 branches:
   only:
   - MySolace
 cache:
-  yarn: true
   directories:
   - node_modules
 before_script:
@@ -27,6 +25,3 @@ deploy:
   project_name: Crisis Trends
   on:
     branch: gh-pages
-env:
-  github_token: "$GITHUB_TOKEN"
-  repo_token: "$REPO_TOKEN"
