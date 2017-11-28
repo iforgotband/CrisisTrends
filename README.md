@@ -5,10 +5,9 @@
 # Quickstart
 
 1. Fork this repository.
-1. `git clone https://github.com/YourUserName/CrisisTrends`
-1. `npm install -g gulp outdated`
-1. `cd CrisisTrends`
-1. `npm install`
+1. `git clone git@github.com:YOUR_USER_NAME/CrisisTrends.git`
+1. `cd CrisisTrends && sh setup_dev.sh`
+1. `yarn`
 1. `gulp serve`
 1. `git checkout -b depends/bump/minor/gulp` (or whatever you're doing, descriptively)
 1. Start coding!
