@@ -12,8 +12,7 @@ before_script:
   - wget https://yarnpkg.com/install.sh -O yarn.sh
   - bash yarn.sh
   - export PATH="$HOME/.yarn/bin:$PATH"
-  - npm install babel-core babel-register --save-dev
-  - npm install gulp --save-dev
+  - npm install gulp babel-core babel-register --save-dev
 script:
   - yarn
   - gulp

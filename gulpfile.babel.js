@@ -33,20 +33,26 @@ import pkg from './package.json';
 import merge from 'merge-stream';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
-// Added for gulp-uglify changes
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
+
 var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var del = require('del');
-var gulp = require('gulp');
 var path = require('path');
 var sourcemaps = require('gulp-sourcemaps');
+
 // Lint JavaScript
-gulp.task('lint', () =>
-  gulp.src(['app/scripts/**/*.js', '!node_modules/**', 'app/faq.js'])
-  .pipe($.eslint())
-  .pipe($.eslint.format())
-  .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
-);
+gulp.task('lint', () => {
+// Don't look at node_modules since it's ignored anyway.
+// Return the stream to keep the task from ending early.
+  return gulp.src(['**/*.js', '!node_modules/**'])
+		.pipe(eslint())
+		.pipe(eslint.format())
+		.pipe(eslint.failAfterError())
+//		.pipe($.if(!browserSync.active, $.eslint.failAfterError()))
+});
+
 // Optimize images
 gulp.task('images', () =>
   gulp.src('app/images/**/*')
