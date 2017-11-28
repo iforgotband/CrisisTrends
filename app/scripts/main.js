@@ -18,7 +18,7 @@
   bootstrapWordCloud();
   scrollToTop();
 
-  let resizeTimer;
+  var resizeTimer;
   let w = window.outerWidth;
   window.addEventListener('resize', function(e) {
     clearTimeout(resizeTimer);
