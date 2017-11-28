@@ -9,12 +9,13 @@ cache:
   directories:
   - node_modules
 before_script:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - wget https://yarnpkg.com/install.sh -O yarn.sh
+  - bash yarn.sh
   - export PATH="$HOME/.yarn/bin:$PATH"
-script:
-  - yarn
   - npm install babel-core babel-register --save-dev
   - npm install gulp --save-dev
+script:
+  - yarn
   - gulp
 deploy:
   provider: pages
