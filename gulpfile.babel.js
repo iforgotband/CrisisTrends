@@ -64,35 +64,6 @@ gulp.task('styles:css', function () {
     .pipe($.size({title: 'styles:css'}));
 });
 
-// Compile Sass For Style Guide Components (app/styles/components)
-gulp.task('styles:components', function () {
-  return gulp.src('app/styles/components/components.scss')
-    .pipe($.rubySass({
-      style: 'expanded',
-      precision: 10,
-      loadPath: ['app/styles/components']
-    }))
-    .pipe($.autoprefixer('last 1 version'))
-    .pipe(gulp.dest('app/styles/components'))
-    .pipe($.size({title: 'styles:components'}));
-});
-
-// Compile Any Other Sass Files You Added (app/styles)
-gulp.task('styles:scss', function () {
-  return gulp.src(['app/styles/**/*.scss', '!app/styles/components/components.scss'])
-    .pipe($.rubySass({
-      style: 'expanded',
-      precision: 10,
-      loadPath: ['app/styles']
-    }))
-    .pipe($.autoprefixer('last 1 version'))
-    .pipe(gulp.dest('.tmp/styles'))
-    .pipe($.size({title: 'styles:scss'}));
-});
-
-// Output Final CSS Styles
-gulp.task('styles', ['styles:components', 'styles:scss', 'styles:css']);
-
 // Scan Your HTML For Assets & Optimize Them
 gulp.task('html', function () {
   return gulp.src('app/**/*.html')
