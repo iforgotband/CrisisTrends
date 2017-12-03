@@ -1,6 +1,7 @@
 node_modules
 dist/
 .tmp
+.bak
 app.yaml
 .DS_Store
 .publish/

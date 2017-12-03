@@ -6,17 +6,17 @@
  *
  * @return {element}   The element that was toggled.
  */
-window.toggle = function(e) {
-  if (e instanceof NodeList) {
-    e.forEach(toggle);
-    return e;
-  }
+window.toggle = function (e) {
+    if (e instanceof NodeList) {
+        e.forEach(toggle);
+        return e;
+    }
 
-  if (e.style.display === 'inherit') {
-    return hide(e);
-  }
+    if (e.style.display === 'inherit') {
+        return hide(e);
+    }
 
-  return show(e);
+    return show(e);
 }
 
 /**
@@ -26,14 +26,14 @@ window.toggle = function(e) {
  *
  * @return {element} The element hidden
  */
-window.hide = function(e) {
-  if (e instanceof NodeList) {
-    e.forEach(hide);
-  } else {
-    e.style.display = 'none';
-  }
+window.hide = function (e) {
+    if (e instanceof NodeList) {
+        e.forEach(hide);
+    } else {
+        e.style.display = 'none';
+    }
 
-  return e;
+    return e;
 }
 
 /**
@@ -43,12 +43,12 @@ window.hide = function(e) {
  *
  * @return {element} The element unhidden
  */
-window.show = function(e) {
-  if (e instanceof NodeList) {
-    e.forEach(hide);
-  } else {
-    e.style.display = 'inherit';
-  }
+window.show = function (e) {
+    if (e instanceof NodeList) {
+        e.forEach(hide);
+    } else {
+        e.style.display = 'inherit';
+    }
 
-  return e;
+    return e;
 }
